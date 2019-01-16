@@ -24,19 +24,19 @@ class UsuarioController extends ActiveController
         return $behaviors;
     }
 
-    public function actions()
-    {
-        return [
-            'index' => [
-                'class' => 'yii\rest\IndexAction',
-                'modelClass' => $this->modelClass,
-                'prepareDataProvider' => function () {
-                    $searchModel = new UsuarioSearch();
-                    return $searchModel->search(Yii::$app->request->queryParams);
-                },
-            ],
-        ];
-    }
+//    public function actions()
+//    {
+//        return [
+//            'index' => [
+//                'class' => 'yii\rest\IndexAction',
+//                'modelClass' => $this->modelClass,
+//                'prepareDataProvider' => function () {
+//                    $searchModel = new UsuarioSearch();
+//                    return $searchModel->search(Yii::$app->request->queryParams);
+//                },
+//            ],
+//        ];
+//    }
 
 }
 
