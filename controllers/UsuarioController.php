@@ -2,6 +2,8 @@
 
 namespace app\controllers;
 
+use app\models\UsuarioSearch;
+use Yii;
 use yii\rest\ActiveController;
 use yii\web\Response;
 
@@ -20,6 +22,20 @@ class UsuarioController extends ActiveController
         $behaviors = parent::behaviors();
         $behaviors['contentNegotiator']['formats']['application/xml'] = Response::FORMAT_XML;
         return $behaviors;
+    }
+
+    public function actions()
+    {
+        return [
+            'index' => [
+                'class' => 'yii\rest\IndexAction',
+                'modelClass' => $this->modelClass,
+                'prepareDataProvider' => function () {
+                    $searchModel = new UsuarioSearch();
+                    return $searchModel->search(Yii::$app->request->queryParams);
+                },
+            ],
+        ];
     }
 
 }
