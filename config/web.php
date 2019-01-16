@@ -53,8 +53,8 @@ $config = [
             'enableStrictParsing' => true,
             'showScriptName' => false,
             'rules' => [
-//                ['class' => 'yii\rest\UrlRule', 'controller' => 'usuario'],
-                ['class' => 'yii\rest\UrlRule', 'controller' => 'usuario', 'pluralize' => false, 'extraPatterns' => ['GET search' => 'search']],
+                ['class' => 'yii\rest\UrlRule', 'controller' => 'usuario'],
+//                ['class' => 'yii\rest\UrlRule', 'controller' => 'usuario', 'pluralize' => false, 'extraPatterns' => ['GET search' => 'search']],
             ],
         ],
         /*
