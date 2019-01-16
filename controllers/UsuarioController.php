@@ -20,19 +20,19 @@ class UsuarioController extends Controller
     //Qual modelos esta classe se refere
     public $modelClass = 'app\models\Usuario';
 
-    public function actions()
-    {
-        return [
-            'index' => [
-                'class' => 'yii\rest\IndexAction',
-                'modelClass' => $this->modelClass,
-                'prepareDataProvider' => function () {
-                    $searchModel = new UsuarioSearch();
-                    return $searchModel->search(Yii::$app->request->queryParams);
-                },
-            ],
-        ];
-    }
+//    public function actions()
+//    {
+//        return [
+//            'index' => [
+//                'class' => 'yii\rest\IndexAction',
+//                'modelClass' => $this->modelClass,
+//                'prepareDataProvider' => function () {
+//                    $searchModel = new UsuarioSearch();
+//                    return $searchModel->search(Yii::$app->request->queryParams);
+//                },
+//            ],
+//        ];
+//    }
 
 
     //Adicione estas linhas para poder retornar os dados em XML
