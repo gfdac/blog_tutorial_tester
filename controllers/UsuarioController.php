@@ -2,13 +2,13 @@
 
 namespace app\controllers;
 
-use yii\web\Controller;
+use yii\rest\ActiveController;
 use yii\web\Response;
 
 /**
  * UsuarioController implements the CRUD actions for Usuario model.
  */
-class UsuarioController extends Controller
+class UsuarioController extends ActiveController
 {
 
 
